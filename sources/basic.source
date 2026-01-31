@@ -1,0 +1,27 @@
+alias ls='ls -Fa --color=auto --show-control-chars'
+alias ll='ls -l'
+alias h='history'
+alias vim='vim -p'
+
+export PATH=${PATH}:~/bin
+
+export LANG=ja_JP.UTF-8
+
+cdd()
+{
+  devtype=$1
+  tpath="${HOME}/dev/${devtype}/workspaces"
+
+  if [ -d $tpath ]; then
+    cd $tpath
+  else
+    read -p "$tpath is not found, create a dir ? [Y/n]" ans
+    case `echo $ans | tr y Y` in
+      "" | Y* ) 
+        mkdir -p $tpath
+        cd $tpath
+        ;;
+      *       ) ;;
+    esac
+  fi
+}

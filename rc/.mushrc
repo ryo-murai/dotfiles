@@ -1,0 +1,3 @@
+for f in $HOME/dotfiles/sources/*.source ; do
+  source $f 
+done

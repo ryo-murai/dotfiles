@@ -1,0 +1,3 @@
+
+# ENABLE dotfiles sources
+[[ -s "$HOME/.mushrc" ]] && source "$HOME/.mushrc"

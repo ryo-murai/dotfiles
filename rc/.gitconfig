@@ -1,0 +1,27 @@
+# local user config, usernames, etc
+[include]
+  path=~/.gitconfig-local
+[color]
+  ui = true
+[alias]
+  p = pull
+  co = checkout
+  a  = add
+  aa = add -A
+  l  = log
+  st = status
+  sh = stash
+  f  = fetch
+  ci = commit
+  cia = commit -a
+  cm = commit -m
+  di = diff
+  dw = diff --word-diff=color -b
+  br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+[core]
+  attributesfile = ~/.gitattributes
+  pager = less -r
+  editor = vim
+  quotepath = false
+  autocrlf = false
