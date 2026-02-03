@@ -94,4 +94,10 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# local ignore
+## zscaler specific
+sources/*_zs.source
+setup/setup_zs_*.sh
+
+
 # End of https://www.toptal.com/developers/gitignore/api/linux,windows,macos,vim
