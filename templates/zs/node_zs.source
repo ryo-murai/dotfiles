@@ -1,1 +1,1 @@
-export NODE_EXTRA_CA_CERTS=~/winhome/ca_certs/zscaler_root_cacert.crt
+export NODE_EXTRA_CA_CERTS=/etc/ssl/certs/zscaler_root_cacert.pem
