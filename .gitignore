@@ -97,6 +97,8 @@ $RECYCLE.BIN/
 # local ignore
 ## zscaler specific
 sources/*_zs.source
+sources/*secrets.source
+sources/*secret.source
 setup/setup_zs_*.sh
 
 
