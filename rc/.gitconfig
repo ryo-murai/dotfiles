@@ -25,3 +25,5 @@
   editor = vim
   quotepath = false
   autocrlf = false
+[init]
+  defaultBranch = main
