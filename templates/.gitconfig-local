@@ -6,3 +6,7 @@
 # in WSL environment, use credential manager provided by the Git for Windows
 [credential]
   helper = /mnt/c/Program\\ Files/Git/mingw64/bin/git-credential-manager.exe
+
+# not to use credential manager for codecommit GRPC client 
+[credential "codecommit://"]
+  helper = ""
