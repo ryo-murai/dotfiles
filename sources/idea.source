@@ -1,0 +1,29 @@
+if [[ -n "${WSL_DISTRO_NAME:-}" ]]; then
+
+  getIdea() {
+    find "/mnt/c/Program Files/JetBrains/" \
+      -type f -name "idea64.exe" -print -quit
+  }
+
+  idea() {
+    local target="${1:-.}"
+    local ideaexe
+    local projectpath
+
+    ideaexe="$(getIdea)"
+
+    if [[ ! -f "$ideaexe" ]]; then
+      echo "IntelliJ IDEA not found" >&2
+      return 1
+    fi
+
+    projectpath="$(realpath -e "$target")" || return 1
+    projectpath="$(wslpath -w "$projectpath")" || return 1
+
+    (
+      cd /mnt/c || exit 1
+      nohup "$ideaexe" "$projectpath" >/dev/null 2>&1 </dev/null &
+    )
+  }
+
+fi
